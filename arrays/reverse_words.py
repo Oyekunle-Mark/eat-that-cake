@@ -57,3 +57,26 @@ def reverse_by_words(words):
     for start, end in word_positions:
         # call reverse_by_characters passing in the values in the tuples
         reverse_by_characters(words, start, end)
+
+
+message = ['c', 'a', 'k', 'e', ' ',
+           'p', 'o', 'u', 'n', 'd', ' ',
+           's', 't', 'e', 'a', 'l']
+reverse_by_words(message)
+print(''.join(message))
+
+message = list("vault")
+reverse_by_words(message)
+print(''.join(message))
+
+message = list('thief cake')
+reverse_by_words(message)
+print(''.join(message))
+
+message = list('rat the ate cat the')
+reverse_by_words(message)
+print(''.join(message))
+
+message = list('yummy is cake bundt chocolate')
+reverse_by_words(message)
+print(''.join(message))
