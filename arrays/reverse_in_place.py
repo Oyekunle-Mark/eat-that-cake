@@ -1,8 +1,8 @@
 def reverse_in_place(char_ls):
+    # set the left index to zero
+    left_index = 0
     # get the length of the char_ls - 1 and set to a variable right_index
     right_index = len(char_ls) - 1
-    # set the index to zero
-    left_index = 0
 
     # while left_index is less than right_index
     while left_index < right_index:
