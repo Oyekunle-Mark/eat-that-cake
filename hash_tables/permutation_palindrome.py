@@ -9,12 +9,16 @@ def has_palindrome_permutation(the_string):
 
     # loop through and count characters
     for char in the_string:
+        # if char is in char_count already, increment the count
         if char in char_count:
             char_count[char] += 1
+        # otherwise, set it to one
         else:
-            char_count[char] = 0
+            char_count[char] = 1
+
     # set a variable is_odd to zero
     is_odd = 0
+
     # loop through the count dictionary
     for key, value in char_count.items():
         # if a character occurred an odd number of times
@@ -26,5 +30,13 @@ def has_palindrome_permutation(the_string):
             # otherwise, increment is_odd
             else:
                 is_odd += 1
+
     # return True
     return True
+
+
+print(has_palindrome_permutation('aabcbcd'))  # True
+print(has_palindrome_permutation('aabccbdd'))  # True
+print(has_palindrome_permutation('aabcd'))  # False
+print(has_palindrome_permutation('aabbcd'))  # False
+print(has_palindrome_permutation(''))  # True
