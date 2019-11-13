@@ -4,11 +4,10 @@ def get_max_profit(stock_prices):
     # initialize max_profit to the difference between first and second prices
     max_profit = stock_prices[1] - stock_prices[0]
     # loop through the stock_prices
-    for price in stock_prices:
-        # check if the current price is less than minimum_stock_price
-        if price < minimum_stock_price:
-            # replace minimum_stock_price with current stock
-            minimum_stock_price = price
+    # starting at the second index
+    for index in range(1, len(stock_prices)):
+        # set current price
+        price = stock_prices[index]
         # initialize current_max_profit to price minus minimum_stock_price
         current_max_profit = price - minimum_stock_price
         # check if the difference between current price and minimum stock
@@ -16,6 +15,10 @@ def get_max_profit(stock_prices):
         if current_max_profit > max_profit:
             # replace max_profit with the difference
             max_profit = current_max_profit
+        # check if the current price is less than minimum_stock_price
+        if price < minimum_stock_price:
+            # replace minimum_stock_price with current stock
+            minimum_stock_price = price
     # return max_profit
     return max_profit
 
