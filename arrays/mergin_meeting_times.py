@@ -16,7 +16,7 @@ def merge_ranges(meetings):
             if previous_end >= end_time:
                 # do nothing
                 continue
-            # otherwise
+            # otherwise,
             else:
                 # update the end time of the previous meeting
                 ordered_meetings[-1] = (previous_start, end_time)
