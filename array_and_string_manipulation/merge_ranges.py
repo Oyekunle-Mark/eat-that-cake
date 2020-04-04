@@ -30,3 +30,5 @@ def merge_ranges(meetings):
 print(merge_ranges([(1, 3), (2, 4)]))
 print(merge_ranges([(5, 6), (6, 8)]))
 print(merge_ranges([(1, 8), (2, 5)]))
+print(merge_ranges([(5, 8), (1, 4), (6, 8)]))
+print(merge_ranges([(0, 1), (3, 5), (4, 8), (10, 12), (9, 10)]))
