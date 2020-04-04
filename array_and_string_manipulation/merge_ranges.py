@@ -25,3 +25,4 @@ def merge_ranges(meetings):
     return ret
 
 print(merge_ranges([(1, 3), (2, 4)]))
+print(merge_ranges([(5, 6), (6, 8)]))
