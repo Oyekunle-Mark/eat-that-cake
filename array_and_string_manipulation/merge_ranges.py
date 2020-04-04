@@ -11,8 +11,10 @@ def merge_ranges(meetings):
         # compare end to the start time of current meeting
         # if end is greater than or equal to start time
         if end >= meetings[index][0]:
-            # set end to the end time of current meeting
-            end = meetings[index][1]
+            # if the end time of current meeting is greater than end time
+            if meetings[index][1] > end:
+                # set end to the end time of current meeting
+                end = meetings[index][1]
         # otherwise, if end is less than start time
         else:
             # append start time and end to ret as a tuple
@@ -24,5 +26,7 @@ def merge_ranges(meetings):
     # return ret
     return ret
 
+
 print(merge_ranges([(1, 3), (2, 4)]))
 print(merge_ranges([(5, 6), (6, 8)]))
+print(merge_ranges([(1, 8), (2, 5)]))
