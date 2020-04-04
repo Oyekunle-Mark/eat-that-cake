@@ -6,6 +6,7 @@ def merge_ranges(meetings):
     # initialize variables start and end to the intergers
     # in the first tuple in meetings
     start, end = meetings[0]
+
     # loop through meetings
     for index in range(1, len(meetings)):
         # compare end to the start time of current meeting
@@ -21,8 +22,10 @@ def merge_ranges(meetings):
             ret.append((start, end))
             # set start and end to the start and end times of next meeting
             start, end = meetings[index]
+
     # add the start and end time range to ret
     ret.append((start, end))
+
     # return ret
     return ret
 
