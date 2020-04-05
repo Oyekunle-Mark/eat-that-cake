@@ -19,9 +19,8 @@ def reverse_words(message):
     end_index = len(message) - 1
     # reverse the entire list in place
     reverse_array_portion(start_index, end_index, message)
-    print("***", message)
     # loop through for every character in message
-    for character, current_index in enumerate(message):
+    for current_index, character in enumerate(message):
         # if current character is an empty space
         if character == ' ':
             # reverse the characters from start_index to current_index minus one
