@@ -30,3 +30,9 @@ def reverse_words(message):
     # remember to swap the characters of the last word
     # swap using start_index and end_index
     reverse_array_portion(start_index, end_index, message)
+
+
+message = list('yummy is cake bundt chocolate')
+
+reverse_words(message)
+print(''.join(message))
