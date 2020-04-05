@@ -9,4 +9,12 @@ def reverse_array_portion(start_index, end_index, arr):
 
 
 def reverse_words(message):
+    # grab the start and end index of message
+    # reverse the entire list in place
+    # loop through for every character in message
+        # if current character is an empty space
+            # reverse the characters from start_index to current_index
+            # set start_index to current_index
+    # remember to swap the characters of the last word
+    # swap using start_index and end_index
     pass
