@@ -2,10 +2,13 @@
 # it should take the start_index, end_index and the list to be reversed
 def reverse_array_portion(start_index, end_index, arr):
     # loop while start_index is less than end_index
+    while start_index < end_index:
     # swap item at start_index and end_index
-    # increment start_index
-    # decrement end_index
-    pass
+        arr[start_index], arr[end_index] = arr[end_index], arr[start_index]
+        # increment start_index
+        start_index += 1
+        # decrement end_index
+        end_index -= 1
 
 
 def reverse_words(message):
