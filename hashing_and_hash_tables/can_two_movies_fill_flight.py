@@ -1,6 +1,6 @@
 def can_two_movies_fill_flight(movie_lengths, flight_length):
     # initialize movie_lengths_dict to empty dictionary
-    movie_lengths_dict = {}
+    movie_lengths_dict = set()
 
     # loop through movie in movie_lengths
     for movie in movie_lengths:
@@ -10,7 +10,7 @@ def can_two_movies_fill_flight(movie_lengths, flight_length):
             return True
 
         # add movie to the movie_lengths_dict and set its value to True
-        movie_lengths_dict[movie] = True
+        movie_lengths_dict.add(movie)
 
     # return False
     return False
