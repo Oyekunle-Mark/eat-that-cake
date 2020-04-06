@@ -27,3 +27,8 @@ def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
             return False
     # return True
     return True
+
+
+print(is_first_come_first_served([1, 4, 5], [2, 3, 6], [1, 2, 3, 4, 5, 6]))
+print(is_first_come_first_served([1, 5], [2, 3, 6], [1, 2, 6, 3, 5]))
+print(is_first_come_first_served([], [2, 3, 6], [2, 3, 6]))
