@@ -7,16 +7,14 @@ def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
     dine_in_limit = len(dine_in_orders) - 1
     # loop for every order in served_orders
     for order in served_orders:
-        # if take_out_orders is not an empty list
+        # if the take_out_index is less than or equal to take_out_limit
         # and order is take_out_index of take_out_orders
         if take_out_index <= take_out_limit and order == take_out_orders[take_out_index]:
-            
             # increment take_out_index
             take_out_index += 1
-        # otherwise, if dine_in_orders is not an empty list
+        # if dine_in_index is less than or equal to dine_in_limit
         # and order is dine_in_index of dine_in_orders
         elif dine_in_index <= dine_in_limit and order == dine_in_orders[dine_in_index]:
-            
             # increment dine_in_index
             dine_in_index += 1
         # otherwise
