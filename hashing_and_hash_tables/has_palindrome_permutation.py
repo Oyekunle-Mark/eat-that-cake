@@ -34,6 +34,7 @@ def has_palindrome_permutation(the_string):
 def has_palindrome_permutation2(the_string):
     # create a set and name if characters
     characters = set()
+
     # loop through every character in the_string
     for char in the_string:
         # if character is in characters
@@ -44,5 +45,6 @@ def has_palindrome_permutation2(the_string):
         else:
             # add it to the characters set
             characters.add(char)
+
     # if length of characters is one or zero return True
     return len(characters) <= 1
