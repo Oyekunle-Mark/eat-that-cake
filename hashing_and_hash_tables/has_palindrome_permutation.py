@@ -1,6 +1,7 @@
 def has_palindrome_permutation(the_string):
     # initialize character_count to an empty dictionary
     character_count = {}
+
     # loop through every character in the_string
     for character in the_string:
         # if character is in character_count
@@ -11,8 +12,10 @@ def has_palindrome_permutation(the_string):
         else:
             #  add it to character_count and set it as 1
             character_count[character] = 1
+
     # initialize even_count to zero
     even_count = 0
+
     # loop through every count in character_count
     for _, count in character_count.items():
         # if count is not even
@@ -23,5 +26,6 @@ def has_palindrome_permutation(the_string):
                 return False
             # increment even_count by one
             even_count += 1
+
     # return True
     return True
