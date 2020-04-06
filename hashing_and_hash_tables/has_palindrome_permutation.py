@@ -32,4 +32,11 @@ def has_palindrome_permutation(the_string):
 
 
 def has_palindrome_permutation2(the_string):
+    # create a set and name if characters
+    # loop through every character in the_string
+        # if character is in characters
+            # remove if from the characters set
+        # otherwise,
+            # add it to the characters set
+    # if length of characters is one or zero return True
     pass
