@@ -29,3 +29,7 @@ def has_palindrome_permutation(the_string):
 
     # return True
     return True
+
+
+def has_palindrome_permutation2(the_string):
+    pass
