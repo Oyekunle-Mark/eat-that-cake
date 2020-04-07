@@ -14,7 +14,11 @@ def sort_scores(unsorted_scores, highest_possible_score):
             # set the score index of score_count to one
             score_count[score] = 1
     # loop through every index of score_count backwards
+    for index in range(len(score_count), -1, -1):
         # if score_count[index] is not None:
+        if score_count[index] is not None:
             # append index to sorted_scores score_count[index] number of times
+            for _ in range(score_count[index]):
+                sorted_scores.append(index)
     # return sorted_scores
     return sorted_scores
