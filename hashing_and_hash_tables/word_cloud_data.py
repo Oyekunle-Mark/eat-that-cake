@@ -27,6 +27,11 @@ def split_word(string):
             split_words.append(current_word)
             # reset current_word
             current_word = ''
+    # append the last word
+    # if current_word
+    if current_word:
+        # append to split_words
+        split_words.append(current_word)
     # return split_words
     return split_words
 
