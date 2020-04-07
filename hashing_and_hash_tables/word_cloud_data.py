@@ -16,3 +16,10 @@ def split_word(string):
             # append current_word to split_words
     # return split_words
     pass
+
+
+print(word_cloud_data('Chocolate cake for dinner and pound cake for dessert'))
+print(word_cloud_data('Strawberry short cake? Yum!'))
+print(word_cloud_data('Dessert - mille-feuille cake'))
+print(word_cloud_data('Mmm...mmm...decisions...decisions'))
+print(word_cloud_data("Allie's Bakery: Sasha's Cakes"))
