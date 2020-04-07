@@ -1,5 +1,14 @@
 def word_cloud_data(the_string):
-    return split_word(the_string)
+    # initialize split_string to the return value of split_word
+    # initialize word_count to empty dictionary
+    # loop through for every word in split_string
+        # if word to lower case is in word_count
+            # increment the count
+        # otherwise
+            # add the word to lower case to the word_count
+            # and set the value to one
+    # return word_count
+    pass
 
 
 def split_word(string):
