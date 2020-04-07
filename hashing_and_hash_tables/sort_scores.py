@@ -22,3 +22,6 @@ def sort_scores(unsorted_scores, highest_possible_score):
                 sorted_scores.append(index)
     # return sorted_scores
     return sorted_scores
+
+
+print(sort_scores([37, 89, 41, 65, 91, 53], 100))
