@@ -1,6 +1,6 @@
 def sort_scores(unsorted_scores, highest_possible_score):
     # initialize a new list score_count to the size of highest_possible_score plus one
-    score_count = [None] * highest_possible_score + 1
+    score_count = [None] * (highest_possible_score + 1)
     # initialize sorted_scores to an empty list
     sorted_scores = []
     # loop through every score in unsorted_scores
