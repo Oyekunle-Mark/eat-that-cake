@@ -13,12 +13,8 @@ def sort_scores(unsorted_scores, highest_possible_score):
         else:
             # set the score index of score_count to one
             score_count[score] = 1
-    # loop through every count in score_count:
-    for index, count in enumerate(score_count):
-        # if current count is not None
-        if count is not None:
-            # append the current index to sorted_scores count number of times
-            for _ in range(count):
-                sorted_scores.append(count)
+    # loop through every index of score_count backwards
+        # if score_count[index] is not None:
+            # append index to sorted_scores score_count[index] number of times
     # return sorted_scores
     return sorted_scores
