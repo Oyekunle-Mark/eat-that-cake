@@ -25,6 +25,8 @@ def split_word(string):
         else:
             # append current_word to split_words
             split_words.append(current_word)
+            # reset current_word
+            current_word = ''
     # return split_words
     return split_words
 
