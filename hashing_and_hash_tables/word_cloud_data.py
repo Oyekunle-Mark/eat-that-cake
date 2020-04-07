@@ -1,5 +1,5 @@
 def word_cloud_data(the_string):
-    pass
+    return split_word(the_string)
 
 
 def split_word(string):
