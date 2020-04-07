@@ -57,3 +57,5 @@ print(word_cloud_data('Strawberry short cake? Yum!'))
 print(word_cloud_data('Dessert - mille-feuille cake'))
 print(word_cloud_data('Mmm...mmm...decisions...decisions'))
 print(word_cloud_data("Allie's Bakery: Sasha's Cakes"))
+print(word_cloud_data(
+    "We came, we saw, we conquered...then we ate Bill's (Mille-Feuille) cake."))
