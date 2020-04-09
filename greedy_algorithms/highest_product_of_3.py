@@ -39,5 +39,6 @@ def highest_product_of_3(list_of_ints):
         lowest = min(lowest, current)
         # set highest to the maximum of highest and interger
         highest = max(highest, current)
+
     # return highest_product_of_three
     return highest_product_of_three
