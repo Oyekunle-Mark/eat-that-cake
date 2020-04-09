@@ -2,7 +2,7 @@ def highest_product_of_3(list_of_ints):
     # initialize lowest_interger and highest_integer to the first integer
     # initialize the lowest_product_of_two and highest_product_of_two
     # to the product of the first two integers
-    # set highest_product_of_three to zero
+    # set highest_product_of_three to the product of the first three integers
     # loop through every integer starting from the third integer
         # if integer multiplied by highest_product_of_two
         # is greater than highest_product_of_three
