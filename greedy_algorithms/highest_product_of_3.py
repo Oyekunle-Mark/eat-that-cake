@@ -1,10 +1,10 @@
 def highest_product_of_3(list_of_ints):
     # initialize lowest_interger and highest_integer to the first integer
-    lowest_integer, highest_integer = list_of_ints[0]
+    lowest_integer, highest_integer = list_of_ints[0], list_of_ints[0]
     # initialize the lowest_product_of_two and highest_product_of_two
     # to the product of the first two integers
     lowest_product_of_two, highest_product_of_two = list_of_ints[0] * \
-        list_of_ints[1]
+        list_of_ints[1], list_of_ints[0] * list_of_ints[1]
     # set highest_product_of_three to the product of the first three integers
     highest_product_of_three = list_of_ints[0] * \
         list_of_ints[1] * list_of_ints[2]
