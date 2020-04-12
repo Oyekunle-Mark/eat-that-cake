@@ -3,11 +3,13 @@ def get_products_of_all_ints_except_at_index(int_list):
     if len(int_list) < 2:
         # raise IndexError
         raise IndexError('Cannot find product of less than two numbers!')
+
     # initialize product_at_all_ints_except_index to list
     # of Nones of size int_list
     product_at_all_ints_except_index = [None] * len(int_list)
     # set product_so_far to one
     product_so_far = 1
+
     # loop through every int in int_list
     for index in range(0, len(int_list)):
         # set value at current index of product_at_all_ints_except_index
@@ -16,8 +18,10 @@ def get_products_of_all_ints_except_at_index(int_list):
         # set product_so_far to the product of product_so_far and
         # integer at current index of int_list
         product_so_far *= int_list[index]
+
     # set product_so_far to one
     product_so_far = 1
+
     # loop through int_list backwards
     for index in range(len(int_list) - 1, -1, -1):
         # set value at current index of product_at_all_ints_except_index to the
@@ -26,5 +30,6 @@ def get_products_of_all_ints_except_at_index(int_list):
         # set product_so_far to the product of product_so_far and
         # integer at current index of int_list
         product_so_far *= int_list[index]
+
     # return product_at_all_ints_except_index
     return product_at_all_ints_except_index
