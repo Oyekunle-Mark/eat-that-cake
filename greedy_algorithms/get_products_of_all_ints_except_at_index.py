@@ -1,4 +1,6 @@
 def get_products_of_all_ints_except_at_index(int_list):
+    # if length of int_list is less than two
+        # raise IndexError
     # initialize product_at_all_ints_except_index to list
     # of Nones of size int_list
     product_at_all_ints_except_index = [None] * len(int_list)
