@@ -7,7 +7,9 @@ def get_random(floor, ceiling):
 
 def shuffle(the_list):
     # if length of the_list is less than two
+    if len(the_list) < 2:
         # return the_list
+        return the_list
     # initialize ceiling to the length of the_list minus one
     ceiling = len(the_list) - 1
     # loop through every index in the_list
