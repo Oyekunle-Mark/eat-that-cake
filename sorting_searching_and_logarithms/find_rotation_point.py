@@ -10,12 +10,16 @@ def find_rotation_point(words):
         # set midpoint to the average of floor_index and ceiling_index
         midpoint = (floor_index + ceiling_index) // 2
         # if midpoint is greater than first_word
-        if words[midpoint] > first_word:
+        if words[midpoint] >= first_word:
             # set floor_index to midpoint
             floor_index = midpoint
         # otherwise
         else:
             # set ceiling_index to midpoint
             ceiling_index = midpoint
-    # return ceiling_index
-    return ceiling_index
+
+        # If floor and ceiling have converged
+        if floor_index + 1 == ceiling_index:
+            # Between floor and ceiling is where we flipped to the beginning
+            # so ceiling is alphabetically first
+            return ceiling_index
