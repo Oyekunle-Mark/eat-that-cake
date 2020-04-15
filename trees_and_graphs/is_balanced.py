@@ -15,8 +15,9 @@ def is_balanced(tree_root):
         # if current node does not have a left and right child
         # that is, the node is a leaf node
         if node.left is None and node.right is None:
-            # push depth onto the depths list
-            depths.append(depth)
+            # only add new depth to the depth list
+            # if depth is not in depths
+                # append to the depth list
             # if depths is longer that two or absolute difference between
             # the two depths is greater than one
             if len(depths) > 2 or (len(depths) == 2 and abs(depths[0] - depths[1]) > 1):
