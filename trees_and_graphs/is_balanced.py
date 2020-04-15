@@ -17,7 +17,10 @@ def is_balanced(tree_root):
         if node.left is None and node.right is None:
             # only add new depth to the depth list
             # if depth is not in depths
+            if depth not in depths:
                 # append to the depth list
+                # append depth onto the depths list
+                depths.append(depth)
             # if depths is longer that two or absolute difference between
             # the two depths is greater than one
             if len(depths) > 2 or (len(depths) == 2 and abs(depths[0] - depths[1]) > 1):
