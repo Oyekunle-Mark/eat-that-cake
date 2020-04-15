@@ -1,4 +1,7 @@
 def is_balanced(tree_root):
+    # if tree_root does not have a left and right child
+    if tree_root.left is None and tree_root.right is None:
+        return True
     # initialize stack to empty list
     stack = []
     # initialize depths to empty list
@@ -16,7 +19,7 @@ def is_balanced(tree_root):
             depths.append(depth)
             # if depths is longer that two or absolute difference between
             # the two depths is greater than one
-            if len(depths) > 2 or (len(depths) > 1 and abs(depths[0] - depths[1]) > 1):
+            if len(depths) > 2 or (len(depths) == 2 and abs(depths[0] - depths[1]) > 1):
                 # return False
                 return False
         # if there is a left child
