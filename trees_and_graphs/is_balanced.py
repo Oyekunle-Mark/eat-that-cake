@@ -1,3 +1,22 @@
+"""
+class BinaryTreeNode(object):
+
+    def __init__(self, value):
+        self.value = value
+        self.left  = None
+        self.right = None
+
+    def insert_left(self, value):
+        self.left = BinaryTreeNode(value)
+        return self.left
+
+    def insert_right(self, value):
+        self.right = BinaryTreeNode(value)
+        return self.right
+"""
+
+
+
 def is_balanced(tree_root):
     # if tree_root does not have a left and right child
     if tree_root.left is None and tree_root.right is None:
