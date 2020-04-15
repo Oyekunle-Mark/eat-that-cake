@@ -16,7 +16,6 @@ class BinaryTreeNode(object):
 """
 
 
-
 def is_balanced(tree_root):
     # if tree_root does not have a left and right child
     if tree_root.left is None and tree_root.right is None:
