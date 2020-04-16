@@ -33,7 +33,7 @@ def is_binary_search_tree(root):
         if node.left is not None:
             # if value of left child is greater than value of node
             # of node value if greater than the root node value
-            if node.left.value > node.value:
+            if node.left.value > node.value or node.left.value > root.value:
                 # return False
                 return False
             # push node onto the stack
@@ -42,7 +42,7 @@ def is_binary_search_tree(root):
         if node.right is not None:
             # if value of right child is less than value of node
             # or node value if less than the root node value
-            if node.right.value < node.value:
+            if node.right.value < node.value or node.right.value < root.value:
                 # return False
                 return False
             # push node onto the stack
