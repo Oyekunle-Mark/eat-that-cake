@@ -32,6 +32,7 @@ def is_binary_search_tree(root):
         # if node has a left child
         if node.left is not None:
             # if value of left child is greater than value of node
+            # of node value if greater than the root node value
             if node.left.value > node.value:
                 # return False
                 return False
@@ -40,6 +41,7 @@ def is_binary_search_tree(root):
         # if node has a right child
         if node.right is not None:
             # if value of right child is less than value of node
+            # or node value if less than the root node value
             if node.right.value < node.value:
                 # return False
                 return False
