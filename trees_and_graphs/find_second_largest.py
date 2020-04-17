@@ -33,7 +33,12 @@ def find_second_largest(root_node):
     # Perform a biased DFT
     # keep going down to the right child node until
     # there is no right child node anymore
-    # at that point return the last node parent node
+    # at that point return the last node parent node if there is no left child
+    # if there is a left child, the second maximum will be
+    # the largest value from the left subtree
+    # alternatively, if the root_node only has a left subtree
+    # the second largest will be the largest value from the
+    # left subtree
 
     # if the root_node is empty or does not have any child nodes
     if (root_node.value is None) or (root_node.right is None and root_node.left is None):
