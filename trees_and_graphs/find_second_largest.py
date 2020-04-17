@@ -17,4 +17,8 @@ class BinaryTreeNode(object):
 
 
 def find_second_largest(root_node):
+    # Perform a biased DFT
+    # keep going down to the right child node until
+    # there is no right child node anymore
+    # at that point return the last node parent node
     pass
