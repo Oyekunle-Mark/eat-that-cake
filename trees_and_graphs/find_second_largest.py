@@ -18,11 +18,15 @@ class BinaryTreeNode(object):
 
 def find_largest(root_node):
     # set the current_node to the root_node
+    current_node = root_node
     # while there is a current_node
+    while current_node:
         # if current_node does not have a right child node
+        if current_node.right is None:
             # return current_node's value
+            return current_node.value
         # set current_node to current_node's right child node
-    pass
+        current_node = current_node.right
 
 
 def find_second_largest(root_node):
