@@ -35,11 +35,13 @@ def color_graph(graph, colors):
             # raise exception that legal coloring is impossible with a node with a loop
             raise Exception('Legal coloring impossible for node with loop: %s' %
                             graph_node.label)
+
         # get all the colors of neighboring nodes
         # initialize neighbors_colors to a set from the list comprehension
         # of all the neighbor in graph_node neighbors that has a color
         neighbors_colors = set(
             [neighbor.color for neighbor in graph_node.neighbors if neighbor.color])
+
         # loop through every color in colors
         for color in colors:
             # if color is not in neighbors_colors
