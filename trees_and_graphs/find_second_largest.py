@@ -23,10 +23,16 @@ def find_second_largest(root_node):
     # at that point return the last node parent node
 
     # if the root_node is empty or does not have any child nodes
+    if (root_node.value is None) or (root_node.right is None and root_node.left is None):
         # raise exception
+        raise ValueError("Root node cannot be empty or be a single node")
     # initialize the current_node to the root_node
-    # loop while stack is not empty
+    current_node = root_node
+    # loop while current_node
+    while current_node:
         # if the current_node does not have a right child node
-            # return the node's value
-        # set current_node to the current_node's right child node            
-    pass
+        if current_node.right is None:
+            # return the current_node's value
+            return current_node.value
+        # set current_node to the current_node's right child node
+        current_node = current_node.right
