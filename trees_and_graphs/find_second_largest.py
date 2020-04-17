@@ -28,11 +28,13 @@ def find_second_largest(root_node):
         raise ValueError("Root node cannot be empty or be a single node")
     # initialize the current_node to the root_node
     current_node = root_node
+    previous_node = None
     # loop while current_node
     while current_node:
         # if the current_node does not have a right child node
         if current_node.right is None:
             # return the current_node's value
-            return current_node.value
+            return previous_node.value
         # set current_node to the current_node's right child node
+        previous_node = current_node
         current_node = current_node.right
