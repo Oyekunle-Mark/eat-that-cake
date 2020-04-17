@@ -26,4 +26,16 @@ def color_graph(graph, colors):
     # we will get all the colors of the neighboring nodes in a set
     # and assign the first color from colors that is not in neighborring
     # color to the graph node.
+
+    # loop through every graph_node in graph
+        # check if the graph node has a loop
+        # if graph_node in graph_node.neighbors
+            # raise exception that legal coloring is impossible with a node with a loop
+        # get all the colors of neighboring nodes
+        # initialize neighbors_colors to a set from the list comprehension
+        # of all the neighbor in graph_node neighbors that has a color
+        # loop through every color in colors
+            # if color is not in neighbors_colors
+                # set the graph_node color to color
+                # break the loop
     pass
