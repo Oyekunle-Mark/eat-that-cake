@@ -24,12 +24,9 @@ def find_second_largest(root_node):
 
     # if the root_node is empty or does not have any child nodes
         # raise exception
-    # create a node_stack as an empty list
-    # push the root node onto the stack
+    # initialize the current_node to the root_node
     # loop while stack is not empty
-        # pop from the stack
-        # if the node has a right child node
-            # push the right child node onto the stack
-        # otherwise
+        # if the current_node does not have a right child node
             # return the node's value
+        # set current_node to the current_node's right child node            
     pass
