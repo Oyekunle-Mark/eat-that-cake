@@ -40,7 +40,9 @@ def find_second_largest(root_node):
         # raise exception
         raise ValueError("Root node cannot be empty or be a single node")
     # if there is a left subtree without a right
+    if root_node.left and root_node.right is None:
         # return the largest value from the left subtree
+        return find_largest(root_node.left)
     # initialize the current_node to the root_node
     current_node = root_node
     previous_node = None
@@ -48,8 +50,10 @@ def find_second_largest(root_node):
     while current_node:
         # if the current_node does not have a right child node
         if current_node.right is None:
-            # if previous_node has a left child node
+            # if current_node has a left child node
+            if current_node.left is not None:
                 # return the largest value from the left subtree
+                return find_largest(current_node.left)
             # return the current_node's value
             return previous_node.value
         # set current_node to the current_node's right child node
