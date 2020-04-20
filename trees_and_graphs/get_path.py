@@ -8,15 +8,26 @@ def get_path(graph, start_node, end_node):
     # initialize visited_node to an empty set
     visited_nodes = set()
     # enqueue the start_node node as a list into the queue
+    queue.appendleft([start_node])
     # loop while queue is not empty
+    while len(queue):
         # dequeue the path from the queue
+        path = queue.pop()
         # get the last_node from the path
+        last_node = path[-1]
         # if the last_node is equivalent to the end_node
+        if last_node == end_node:
             # return the path
+            return path
         # if the last_node has not been visited_node
+        if last_node not in visited_nodes:
             # add it to the visited_node
+            visited_nodes.add(last_node)
             # for every node connected to last_node
+            for node in graph[last_node]:
                 # initialize new_path to a copy of path
+                new_path = list(path)
                 # append node to new_path
+                new_path.append(node)
                 # enqueue new_path into the queue
-    pass
+                queue.appendleft(new_path)
