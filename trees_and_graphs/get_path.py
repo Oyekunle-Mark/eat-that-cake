@@ -3,6 +3,8 @@ from collections import deque
 
 
 def get_path(graph, start_node, end_node):
+    # if the start_node or end_node is not in the graph
+        # raise an exception
     # initialize queue to an instance of deque class
     queue = deque()
     # initialize visited_node to an empty set
