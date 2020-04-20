@@ -31,3 +31,18 @@ def get_path(graph, start_node, end_node):
                 new_path.append(node)
                 # enqueue new_path into the queue
                 queue.appendleft(new_path)
+
+
+graph = {
+    'Min': ['William', 'Jayden', 'Omar'],
+    'William': ['Min', 'Noam'],
+    'Jayden': ['Min', 'Amelia', 'Ren', 'Noam'],
+    'Ren': ['Jayden', 'Omar'],
+    'Amelia': ['Jayden', 'Adam', 'Miguel'],
+    'Adam': ['Amelia', 'Miguel', 'Sofia', 'Lucas'],
+    'Miguel': ['Amelia', 'Adam', 'Liam', 'Nathan'],
+    'Noam': ['Nathan', 'Jayden', 'William'],
+    'Omar': ['Ren', 'Min', 'Scott']
+}
+
+print(get_path(graph, 'Jayden', 'Adam'))
