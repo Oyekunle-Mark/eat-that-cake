@@ -4,7 +4,9 @@ from collections import deque
 
 def get_path(graph, start_node, end_node):
     # if the start_node or end_node is not in the graph
+    if start_node not in graph or end_node not in graph:
         # raise an exception
+        raise Exception("Start and End nodes must be in the same graph")
     # initialize queue to an instance of deque class
     queue = deque()
     # initialize visited_node to an empty set
