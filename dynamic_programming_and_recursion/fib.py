@@ -28,4 +28,15 @@ def fib(n, cache={}):
 
 # third pass would be to code up an iterative solution to the problem
 def fib_iter(n):
+    # write a base of case of n being zero or one
+    # check if n is zero or one
+        # return n in that case
+    # initialize prev_prev to zero
+    # initialize prev to one
+    # loop through range of n minus one
+        # To get nth fibonacci ... do n-1 iterations.
+        # initialize current to the sum of prev and prev_prev
+        # initialize prev_prev to prev
+        # initialize prev to current
+    # return current
     pass
