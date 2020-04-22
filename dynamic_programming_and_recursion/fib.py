@@ -24,3 +24,8 @@ def fib(n, cache={}):
 
     # return nth_fib
     return nth_fib
+
+
+# third pass would be to code up an iterative solution to the problem
+def fib_iter(n):
+    pass
