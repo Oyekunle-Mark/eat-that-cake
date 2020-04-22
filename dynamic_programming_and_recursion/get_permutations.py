@@ -30,7 +30,7 @@ def get_permutations(string):
     # loop for every permutation_without_last in permutations_of_input_string_without_last_character
     for permutation_without_last in permutations_of_input_string_without_last_character:
         # for every index in string
-        for index in range(len(string) + 1):
+        for index in range(len(string)):
             # insert last_char and append to permutations
             permutations.add(
                 permutation_without_last[:index] + last_char + permutation_without_last[index:])
