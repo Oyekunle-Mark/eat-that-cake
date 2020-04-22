@@ -1,6 +1,6 @@
 # modify the function signature to take a default parameter cache
 # which defaults to an empty dict
-def fib(n):
+def fib(n, cache={}):
     # FIRST PASS => NO Memoization
     # SECOND PASS => With Memoization
 
@@ -11,13 +11,16 @@ def fib(n):
         return n
 
     # check if n is in cache
+    if n in cache:
         # return value of key n in cache
+        return cache[n]
 
-    # otherwise, return the sum of recursive call
+    # initialize nth_fib to the return value recursive call
     # to fib passing in n minus one and n minus two
-    return fib(n - 1) + fib(n - 2)
+    nth_fib = fib(n - 1) + fib(n - 2)
 
-    # initialize nth_fib to the return value recursive call 
-    # to fib passing in n minus one and n minus two
     # populate the cache with a key value pair of n and nth_fib
+    cache[n] = nth_fib
+
     # return nth_fib
+    return nth_fib
