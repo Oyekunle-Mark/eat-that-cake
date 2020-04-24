@@ -1,6 +1,6 @@
 # modify the function signature to take a default parameter
-# current_index which is set to one
-def change_possibilities(amount, denominations, current_index=1):
+# current_index which is set to zero
+def change_possibilities(amount, denominations, current_index=0):
     # To solve this problem, think of it as a sum of subproblems
     # of the possibility of making change for each of the denominations
 
@@ -32,3 +32,7 @@ def change_possibilities(amount, denominations, current_index=1):
         amount -= current_coin
     # return sum_of_change_possibility
     return sum_of_change_possibility
+
+
+print(change_possibilities(4, (1, 2, 3)))
+print(change_possibilities(100, (1, 5, 10, 25, 50)))
