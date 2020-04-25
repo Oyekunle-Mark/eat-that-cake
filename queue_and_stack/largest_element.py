@@ -36,7 +36,7 @@ class MaxStack(object):
         # append to self.items
         self.items.append(item)
         # compare item with the largest item in maxes
-        if item >= self.maxes.peek():
+        if self.maxes.peek() is None or item >= self.maxes.peek():
             # if it's larger or equal, push it to maxes
             self.maxes.push(item)
 
