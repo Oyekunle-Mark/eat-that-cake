@@ -31,7 +31,7 @@ def get_closing_paren(sentence, opening_paren_index):
         raise IndexError("Starting position must be an opening parenthesis")
 
     # instantiate paren_count to zero
-
+    paren_count = 0
     # initialize sen_length to the length of the sentence
     sen_length = len(sentence)
 
@@ -40,12 +40,16 @@ def get_closing_paren(sentence, opening_paren_index):
         # if character at current index is an opening parenthesis
         if sentence[index] == '(':
             # increment paren_count
+            paren_count += 1
         # otherwise, if it is a closing parenthesis
         elif sentence[index] == ')':
-            decrement paren_count
+            # decrement paren_count
+            paren_count -= 1
 
         # if paren_count equals zero
+        if paren_count == 0:
             # return index
+            return index
 
     # if the loop terminates without finding matching position
     # raise an exception
