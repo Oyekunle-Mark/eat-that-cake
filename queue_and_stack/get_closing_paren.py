@@ -47,3 +47,6 @@ def get_closing_paren(sentence, opening_paren_index):
         if s.peek() is None:
             # return current index
             return index
+    # if the loop terminates without finding matching position
+    # raise an exception
+    raise IndexError("Starting position must be an opening parenthesis")
