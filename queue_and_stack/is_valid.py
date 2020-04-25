@@ -46,10 +46,12 @@ def is_valid(code):
             s.push(char)
         # otherwise if character is a closer
         elif char in closers:
+            if s.peek() is None:
+                return False
             # pop off the stack
-            closer = s.pop()
+            opener = s.pop()
             # if pop item does not match the current closer
-            if char != openers_to_closers[closer]:
+            if char != openers_to_closers[opener]:
                 # return False
                 return False
     # return True if the stack is empty
