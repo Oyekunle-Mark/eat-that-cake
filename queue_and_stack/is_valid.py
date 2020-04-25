@@ -25,4 +25,17 @@ class Stack(object):
 
 
 def is_valid(code):
+    # create a dict and map each opener to a closer
+    # and name it openers_to_closers
+    # create a set of the openers
+    # create a set of the closers
+    # initialize s to an instance of the Stack class
+    # loop through every character in code
+        # if character is an opener
+            # push it onto the stack
+        # otherwise if character is a closer
+            # pop off the stack
+            # if pop item does not match the current closer
+                # return False
+    # return True if the stack is empty
     pass
