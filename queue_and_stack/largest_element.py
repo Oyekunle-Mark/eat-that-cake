@@ -30,12 +30,15 @@ class MaxStack(object):
         # set items to an instance property as an empty list
         self.items = []
         # set maxes to an instance property of a stack instance
+        self.maxes = Stack()
 
     def push(self, item):
         # append to self.items
         self.items.append(item)
         # compare item with the largest item in maxes
-            # if it's larger, replace it
+        if item >= self.maxes.peek():
+            # if it's larger or equal, push it to maxes
+            self.maxes.push(item)
 
     def pop(self):
         # check if self.items is empty
@@ -45,9 +48,12 @@ class MaxStack(object):
         # get the popped item from self.items
         item = self.items.pop()
         # check if item is the largest item from maxes
+        if item == self.maxes.peek():
             # if it is pop the largest item from maxes too
+            self.maxes.pop()
         # return item
+        return item
 
     def get_max(self):
         # return the return value of the peek method on maxes
-        pass
+        return self.maxes.peek()
