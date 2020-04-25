@@ -22,3 +22,12 @@ class Stack(object):
         if not self.items:
             return None
         return self.items[-1]
+
+
+class QueueTwoStacks(object):
+
+    def enqueue(self, item):
+        pass
+
+    def dequeue(self):
+        pass
