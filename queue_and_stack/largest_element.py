@@ -22,3 +22,18 @@ class Stack(object):
         if not self.items:
             return None
         return self.items[-1]
+
+
+class MaxStack(object):
+
+    def __init__(self):
+        pass
+
+    def push(self, item):
+        pass
+
+    def pop(self):
+        pass
+
+    def get_max(self):
+        pass
