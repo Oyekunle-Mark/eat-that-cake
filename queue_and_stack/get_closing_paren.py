@@ -30,8 +30,8 @@ def get_closing_paren(sentence, opening_paren_index):
         # raise an exception
         raise IndexError("Starting position must be an opening parenthesis")
 
-    # instantiate the stack class
-    s = Stack()
+    # instantiate paren_count to zero
+
     # initialize sen_length to the length of the sentence
     sen_length = len(sentence)
 
@@ -39,17 +39,13 @@ def get_closing_paren(sentence, opening_paren_index):
     for index in range(opening_paren_index, sen_length):
         # if character at current index is an opening parenthesis
         if sentence[index] == '(':
-            # push it to the stack
-            s.push('(')
+            # increment paren_count
         # otherwise, if it is a closing parenthesis
         elif sentence[index] == ')':
-            # pop from the stack
-            s.pop()
+            decrement paren_count
 
-        # if the stack is empty
-        if s.peek() is None:
-            # return current index
-            return index
+        # if paren_count equals zero
+            # return index
 
     # if the loop terminates without finding matching position
     # raise an exception
