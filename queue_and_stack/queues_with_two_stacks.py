@@ -27,16 +27,19 @@ class Stack(object):
 class QueueTwoStacks(object):
     # initialize a constructor
     def __init__(self):
+        """Initialize an empty queue"""
         # set instance properties in_stack and out_stack
         # to stack instances
         self.in_stack = Stack()
         self.out_stack = Stack()
 
     def enqueue(self, item):
+        """add a new item onto the queue"""
         # to enqueue, push onto the in_stack
         self.in_stack.push(item)
 
     def dequeue(self):
+        """remove an item from the queue"""
         # to dequeue, move all the items from the in_stack to the out_stack
         # then pop off the out_stack
 
@@ -48,10 +51,12 @@ class QueueTwoStacks(object):
                 # get the popped item from the in_stack
                 popped_item = self.in_stack.pop()
                 # push that item onto the out_stack
-                self.out_stack.append(popped_item)
+                self.out_stack.push(popped_item)
+
             # if the out_stack is still empty
             if self.out_stack.peek() is None:
                 # raise an exception
                 raise IndexError("Can't dequeue from empty queue!")
+
         # return the popped item from the out_stack
         return self.out_stack.pop()
