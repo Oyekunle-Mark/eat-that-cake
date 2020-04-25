@@ -25,4 +25,15 @@ class Stack(object):
 
 
 def get_closing_paren(sentence, opening_paren_index):
+    # check if the starting parenthesis is a closing one
+        # raise an exception
+    # instantiate the stack class
+    # initialize sen_length to the length of the sentence
+    # loop from opening_paren_index to the end index of sentence
+        # if character at current index is an opening parenthesis
+            # push it to the stack
+        # otherwise, if it is a closing parenthesis
+            # pop from the stack
+        # if the stack is empty
+            # return current index
     pass
