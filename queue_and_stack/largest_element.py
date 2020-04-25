@@ -27,33 +27,41 @@ class Stack(object):
 class MaxStack(object):
 
     def __init__(self):
+        """Initialize an empty stack"""
         # set items to an instance property as an empty list
         self.items = []
         # set maxes to an instance property of a stack instance
         self.maxes = Stack()
 
     def push(self, item):
+        """Push a new item onto the stack"""
         # append to self.items
         self.items.append(item)
+
         # compare item with the largest item in maxes
         if self.maxes.peek() is None or item >= self.maxes.peek():
             # if it's larger or equal, push it to maxes
             self.maxes.push(item)
 
     def pop(self):
+        """Remove and return the last item"""
         # check if self.items is empty
         if not self.items:
             # return None
             return None
+
         # get the popped item from self.items
         item = self.items.pop()
+
         # check if item is the largest item from maxes
         if item == self.maxes.peek():
             # if it is pop the largest item from maxes too
             self.maxes.pop()
+
         # return item
         return item
 
     def get_max(self):
+        """Return the largest item in the stack without removing it"""
         # return the return value of the peek method on maxes
         return self.maxes.peek()
