@@ -27,12 +27,17 @@ class Stack(object):
 class MaxStack(object):
 
     def __init__(self):
+        # set items to an instance property as an empty list
         pass
 
     def push(self, item):
+        # append to self.items
         pass
 
     def pop(self):
+        # check if self.items is empty
+            # return None
+        # return the popped item from self.items
         pass
 
     def get_max(self):
