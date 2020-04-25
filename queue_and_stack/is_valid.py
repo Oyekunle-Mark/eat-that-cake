@@ -6,12 +6,14 @@ def is_valid(code):
         '{': '}',
         '[': ']',
     }
+
     # create a set of the openers
     openers = set(openers_to_closers.keys())
     # create a set of the closers
     closers = set(openers_to_closers.values())
     # initialize s to an instance of the Stack class
     stack = []
+
     # loop through every character in code
     for char in code:
         # if character is an opener
@@ -24,9 +26,11 @@ def is_valid(code):
                 return False
             # pop off the stack
             opener = stack.pop()
+
             # if pop item does not match the current closer
             if char != openers_to_closers[opener]:
                 # return False
                 return False
+
     # return True if the stack is empty
     return len(stack) == 0
