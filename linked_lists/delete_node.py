@@ -26,8 +26,12 @@ def delete_node(node_to_delete):
     # node in the LinkedList or have nodes after it
     # check if node_to_delete next is not None
     # that is node_to_delete is not the tail
+    if node_to_delete.next is not None:
         # set node_to_delete's value to the value of the next
+        node_to_delete.value = node_to_delete.next.value
         # set node_to_delete's next to the next's next
+        node_to_delete.next = node_to_delete.next.next
     # otherwise,
+    else:
         # point node_to_delete to None
-    pass
+        node_to_delete = None
