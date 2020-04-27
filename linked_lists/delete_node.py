@@ -33,5 +33,5 @@ def delete_node(node_to_delete):
         node_to_delete.next = node_to_delete.next.next
     # otherwise,
     else:
-        # point node_to_delete to None
-        node_to_delete = None
+        # this solution does not delete from the tail
+        raise Exception("Can't delete the last node with this technique!")
