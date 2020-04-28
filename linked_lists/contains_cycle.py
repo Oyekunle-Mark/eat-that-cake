@@ -31,4 +31,17 @@ def contains_cycle(first_node):
 
 
 def contains_cycle_optimize(first_node):
+    # an optimized solution for space would be to have two runners
+    # a fast runner runs at twice the speed of the slow runner
+    # if fast runner catches up with slow runner at any point,
+    # we can say we have a loop. But if fast runner ends the iteration
+    # we know there is no loop
+
+    # initialize fast_runner and slow_runner to the first_node
+    # loop while slow_runner has a next and fast_runner has a next next
+        # set slow_runner to the next node
+        # set fast_runner to the next two nodes
+        # check if fast_runner and slow_runner are in the same position
+            # return True
+    # return False
     pass
