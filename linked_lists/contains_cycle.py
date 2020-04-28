@@ -40,8 +40,8 @@ def contains_cycle_optimize(first_node):
     # initialize fast_runner and slow_runner to the first_node
     slow_runner = first_node
     fast_runner = first_node
-    # loop while slow_runner has a next and fast_runner has a next next
-    while slow_runner.next and fast_runner.next.next:
+    # loop while fast runner is not None has a next
+    while fast_runner and fast_runner.next:
         # set slow_runner to the next node
         slow_runner = slow_runner.next
         # set fast_runner to the next two nodes
