@@ -28,3 +28,7 @@ def contains_cycle(first_node):
         current = current.next
     # return False
     return False
+
+
+def contains_cycle_optimize(first_node):
+    pass
