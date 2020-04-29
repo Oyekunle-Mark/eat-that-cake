@@ -30,7 +30,7 @@ The number of digits in the input will always be even.
 def parse_num(inp):
     # parse inp to a string
     inp_str = str(inp)
-    # # create a mapping of int to text representation
+    # create a mapping of int to text representation
     int_mapping = {
         '0': 'zero',
         '1': 'one',
@@ -42,12 +42,19 @@ def parse_num(inp):
         '7': 'seven',
         '8': 'eight',
         '9': 'nine',
+        '10': 'ten',
+        '11': 'eleven',
+        '12': 'twelve',
+        '13': 'thirteen',
+        '14': 'fourteen',
+        '15': 'fifteen',
+        '16': 'sixteen',
+        '17': 'seventeen',
+        '18': 'eighteen',
+        '19': 'nineteen',
     }
-
-    ten_mapping = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen',
-                   'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', ]
-
-    mapping_mult = {
+    # create a mapping of tens to the leading text
+    tens_mapping = {
         '2': 'twenty',
         '3': 'thirty',
         '4': 'forty',
@@ -57,10 +64,11 @@ def parse_num(inp):
         '8': 'eighty',
         '9': 'ninety',
     }
-    # create a list to be returned
+    # instantiate ret to an empty list
     ret = []
-
-    # iterate through inp_str
+    # iterate through inp_str starting at 0 and step through
+    # jumping every one index to always find the start of the next
+    # two digits
     for index in range(0, len(inp_str), 2):
         # check the mapping of the current character in the int_mapping
         # append to the ret
