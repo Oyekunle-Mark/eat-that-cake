@@ -4,7 +4,7 @@ PROBLEM STATEMENT
 
 
 Write a function that converts number to text, Passing an int number should return array of text number.
-The function should chunk the int number into twos and return the text format of the chunks.
+The function should chunk the int number into two digits and return the text format of the chunks.
 
 Example 1:
 Given:
@@ -70,9 +70,7 @@ def parse_num(inp):
     # jumping every one index to always find the start of the next
     # two digits
     for index in range(0, len(inp_str), 2):
-        # check the mapping of the current character in the int_mapping
-        # append to the ret
-        res = ''
+        # if current digit start 
         if inp_str[index] == '0':
             ret.append(int_mapping[inp_str[index+1]])
         elif inp_str[index] == '1':
