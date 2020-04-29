@@ -17,7 +17,7 @@ Example 2:
 def parse_num(inp):
     # parse inp to a string
     inp_str = str(inp)
-    # # create a mapping of int to text representation
+    # create a mapping of int to text representation
     int_mapping = {
         '0': 'zero',
         '1': 'one',
@@ -30,42 +30,12 @@ def parse_num(inp):
         '8': 'eight',
         '9': 'nine',
     }
-
-    ten_mapping = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen',
-                   'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', ]
-
-    mapping_mult = {
-        '2': 'twenty',
-        '3': 'thirty',
-        '4': 'forty',
-        '5': 'fifty',
-        '6': 'sixty',
-        '7': 'seventy',
-        '8': 'eighty',
-        '9': 'ninety',
-    }
-    # create a list to be returned
+    # instantiate ret to an empty list
     ret = []
-
-    # iterate through inp_str
-    for index in range(0, len(inp_str), 2):
-        # check the mapping of the current character in the int_mapping
-        # append to the ret
-        res = ''
-        if inp_str[index] == '0':
-            ret.append(int_mapping[inp_str[index+1]])
-        elif inp_str[index] == '1':
-            ret.append(ten_mapping[int(inp_str[index+1])])
-        else:
-            first = mapping_mult[inp_str[index]]
-            second = int_mapping[inp_str[index+1]]
-
-            if second == 'zero':
-                res = first
-            else:
-                res = first + '-' + second
-
-            ret.append(res)
+    # loop through inp_str
+    for char in inp_str:
+        # append the string mapping of the int character to re
+        ret.append(int_mapping[char])
     # return ret
     return ret
 
