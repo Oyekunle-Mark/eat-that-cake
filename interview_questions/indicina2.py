@@ -5,8 +5,12 @@ PROBLEM STATEMENT
 
 Write a function that converts number to text, Passing an int number should return array of text number.
 
+---------------------------------------------------------------------
+
 Example 1: 
 23498643 => ['two', 'three', 'four', 'nine', 'eight', 'six', 'four', 'three']
+
+---------------------------------------------------------------------
 
 Example 2:
 
