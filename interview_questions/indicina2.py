@@ -30,12 +30,15 @@ def parse_num(inp):
         '8': 'eight',
         '9': 'nine',
     }
+
     # instantiate ret to an empty list
     ret = []
+
     # loop through inp_str
     for char in inp_str:
         # append the string mapping of the int character to re
         ret.append(int_mapping[char])
+
     # return ret
     return ret
 
