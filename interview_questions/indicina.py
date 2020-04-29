@@ -25,8 +25,6 @@ def balance_bracket(input_str: str) -> bool:
     # have a mapBracket dictionary to match opening and closing brackets
     mapBracket = {
         '(': ')',
-        # '{': '}',
-        # '[': ']'
     }
 
     # iterate thorough the input_str
