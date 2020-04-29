@@ -1,4 +1,8 @@
 """
+PROBLEM STATEMENT
+=======================================================================
+
+
 Given a string of round open and closing brackets, return whether the brackets are balanced (well-formed).
 For example, given the string "([])[]({})", you should return true.
 Given the string "([)(]" or "((()", you should return false.
@@ -17,14 +21,14 @@ Given the string "([)(]" or "((()", you should return false.
 def balance_bracket(input_str: str) -> bool:
     # start by instantiating a stack class
     stack = []
+
     # have a mapBracket dictionary to match opening and closing brackets
     mapBracket = {
         '(': ')',
         # '{': '}',
         # '[': ']'
     }
-    # opening = set(['(', '{', '['])
-    # closing = set([')', ']', '}'])
+
     # iterate thorough the input_str
     for char in input_str:
         # if the current character is an opening brackets
@@ -47,6 +51,7 @@ def balance_bracket(input_str: str) -> bool:
     # return True if it is
     # return false otherwise
     return len(stack) == 0
+
 
 print(balance_bracket('()'))
 print(balance_bracket('(([]){})'))
