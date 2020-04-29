@@ -1,66 +1,59 @@
 """
-Write a function that converts number to text, Passing an int number should return array of text number eg
-
-23498643 => [two, three, four, nine, eight, six, four, three]
-40263645 => [four, zero, two, six, three, six, four, four, five]
+Given a string of round open and closing brackets, return whether the brackets are balanced (well-formed).
+For example, given the string "([])[]({})", you should return true.
+Given the string "([)(]" or "((()", you should return false.
+()             => true
+(([]){})    => true
+([)            => true
+([)]        => true
+[(({}[]))]    => true
+[()()]()     => true
+())(        => false
+(hello)        => true
+())            => false
 """
 
 
-def parse_num(inp):
-    # parse inp to a string
-    inp_str = str(inp)
-    # # create a mapping of int to text representation
-    int_mapping = {
-        '0': 'zero',
-        '1': 'one',
-        '2': 'two',
-        '3': 'three',
-        '4': 'four',
-        '5': 'five',
-        '6': 'six',
-        '7': 'seven',
-        '8': 'eight',
-        '9': 'nine',
+def balance_bracket(input_str: str) -> bool:
+    # start by instantiating a stack class
+    stack = []
+    # have a mapBracket dictionary to match opening and closing brackets
+    mapBracket = {
+        '(': ')',
+        # '{': '}',
+        # '[': ']'
     }
+    # opening = set(['(', '{', '['])
+    # closing = set([')', ']', '}'])
+    # iterate thorough the input_str
+    for char in input_str:
+        # if the current character is an opening brackets
+        if char == '(':
+            # push into the stack
+            stack.append(char)
+        # otherwise, if its a closing bracket
+        elif char == ')':
+            # check if stack is empty
+            if len(stack) == 0:
+                # return False
+                return False
+            # # pop from the stack and compare to the current bracket I have
+            popped_item = stack.pop()
+            # # if it does not match
+            if char != mapBracket[popped_item]:
+                # return False
+                return False
+    # check if the stack is empty
+    # return True if it is
+    # return false otherwise
+    return len(stack) == 0
 
-    ten_mapping = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen',
-                   'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', ]
-
-    mapping_mult = {
-        '2': 'twenty',
-        '3': 'thirty',
-        '4': 'forty',
-        '5': 'fifty',
-        '6': 'sixty',
-        '7': 'seventy',
-        '8': 'eighty',
-        '9': 'ninety',
-    }
-    # create a list to be returned
-    ret = []
-
-    # iterate through inp_str
-    for index in range(0, len(inp_str), 2):
-        # check the mapping of the current character in the int_mapping
-        # append to the ret
-        res = ''
-        if inp_str[index] == '0':
-            ret.append(int_mapping[inp_str[index+1]])
-        elif inp_str[index] == '1':
-            ret.append(ten_mapping[int(inp_str[index+1])])
-        else:
-            first = mapping_mult[inp_str[index]]
-            second = int_mapping[inp_str[index+1]]
-
-            if second == 'zero':
-                res = first
-            else:
-                res = first + '-' + second
-
-            ret.append(res)
-    # return ret
-    return ret
-
-
-print(parse_num(23498643))
-print(parse_num(40263645))
+print(balance_bracket('()'))
+print(balance_bracket('(([]){})'))
+print(balance_bracket('([)'))
+print(balance_bracket('([)]'))
+print(balance_bracket('[(({}[]))]'))
+print(balance_bracket('[()()]()'))
+print(balance_bracket('())('))
+print(balance_bracket('(hello)'))
+print(balance_bracket('())'))
