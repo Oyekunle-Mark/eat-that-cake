@@ -92,7 +92,9 @@ def parse_num(inp):
             else:
                 # concatenate the ten value of the first with the int
                 # mapping of the second and append to ret
-                ret.append(tens_mapping[first_digit + '-' + second_digit])
+                text = tens_mapping[first_digit] + \
+                    '-' + int_mapping[second_digit]
+                ret.append(text)
     # return ret
     return ret
 
