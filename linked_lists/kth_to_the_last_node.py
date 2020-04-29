@@ -21,7 +21,7 @@ def kth_to_last_node(k, head):
             # set kth_to_last to the next node after it.
             kth_to_last = kth_to_last.next
     # if count is less than k
-    if count < k:
+    if k == 0 or count < k:
         # raise an exception
         raise Exception("K cannot be zero or greater than Linked List length")
     # return kth_to_last
