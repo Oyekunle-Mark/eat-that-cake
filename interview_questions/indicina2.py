@@ -6,11 +6,11 @@ PROBLEM STATEMENT
 Write a function that converts number to text, Passing an int number should return array of text number.
 
 Example 1: 
-23498643 => [two, three, four, nine, eight, six, four, three]
+23498643 => ['two', 'three', 'four', 'nine', 'eight', 'six', 'four', 'three']
 
 Example 2:
 
-40263645 => [four, zero, two, six, three, six, four, four, five]
+40263645 => ['four', 'zero', 'two', 'six', 'three', 'six', 'four', 'five']
 """
 
 
