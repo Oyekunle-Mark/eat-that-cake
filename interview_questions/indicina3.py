@@ -1,8 +1,16 @@
 """
-Write a function that converts number to text, Passing an int number should return array of text number eg
+PROBLEM STATEMENT
+=======================================================================
 
-23498643 => [two, three, four, nine, eight, six, four, three]
-40263645 => [four, zero, two, six, three, six, four, four, five]
+
+Write a function that converts number to text, Passing an int number should return array of text number.
+The function should chunk the int number into twos and return the text format of the chunks.
+
+Example 1: 
+23498643 => 23, 49, 86, 43 => ['twenty-three', 'forty-nine', 'eighty-six', 'forty-three']
+
+Example 2:
+40263645 => 40, 26, 36, 45 => ['forty', 'twenty-six', 'thirty-six', 'forty-five']
 """
 
 
