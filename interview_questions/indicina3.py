@@ -69,11 +69,13 @@ def parse_num(inp):
     # iterate through inp_str starting at 0 and step through
     # jumping every one index to always find the start of the next
     # chunk
+
     for index in range(0, len(inp_str), 2):
         # set first_digit and second_digit to the first and second
         # digits in the current chunk
         first_digit = inp_str[index]
         second_digit = inp_str[index + 1]
+
         # if current chunk starts with a zero
         if first_digit == '0':
             # append the text value of the second digit
@@ -95,6 +97,7 @@ def parse_num(inp):
                 text = tens_mapping[first_digit] + \
                     '-' + int_mapping[second_digit]
                 ret.append(text)
+
     # return ret
     return ret
 
