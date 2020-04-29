@@ -4,8 +4,12 @@ PROBLEM STATEMENT
 
 
 Given a string of round open and closing brackets, return whether the brackets are balanced (well-formed).
-For example, given the string "([])[]({})", you should return true.
-Given the string "([)(]" or "((()", you should return false.
+
+Example 1: Given the string "([])[]({})", you should return true.
+Example 2: Given the string "([)(]" or "((()", you should return false.
+
+Test Cases:
+
 ()             => true
 (([]){})    => true
 ([)            => true
