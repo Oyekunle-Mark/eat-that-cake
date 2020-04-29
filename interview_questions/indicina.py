@@ -19,36 +19,17 @@ Given the string "([)(]" or "((()", you should return false.
 
 
 def balance_bracket(input_str: str) -> bool:
-    # start by instantiating a stack class
-    stack = []
-
-    # have a mapBracket dictionary to match opening and closing brackets
-    mapBracket = {
-        '(': ')',
-    }
-
-    # iterate thorough the input_str
-    for char in input_str:
-        # if the current character is an opening brackets
-        if char == '(':
-            # push into the stack
-            stack.append(char)
-        # otherwise, if its a closing bracket
-        elif char == ')':
-            # check if stack is empty
-            if len(stack) == 0:
+    # instantiate bracket count to zero
+    # loop through the input_str
+        # if character is an opening bracket
+            # increment count
+        # otherwise, if character is a closing bracket
+            # if count is zero
                 # return False
-                return False
-            # # pop from the stack and compare to the current bracket I have
-            popped_item = stack.pop()
-            # # if it does not match
-            if char != mapBracket[popped_item]:
-                # return False
-                return False
-    # check if the stack is empty
-    # return True if it is
-    # return false otherwise
-    return len(stack) == 0
+            # decrement count
+    # return True if count is zero
+    # and False otherwise
+    pass
 
 
 print(balance_bracket('()'))
