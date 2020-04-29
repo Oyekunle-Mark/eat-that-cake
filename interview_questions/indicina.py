@@ -25,6 +25,7 @@ Test Cases:
 def balance_bracket(input_str: str) -> bool:
     # instantiate bracket count to zero
     bracket_count = 0
+
     # loop through the input_str
     for char in input_str:
         # if character is an opening bracket
@@ -37,8 +38,10 @@ def balance_bracket(input_str: str) -> bool:
             if bracket_count == 0:
                 # return False
                 return False
+
             # decrement count
             bracket_count -= 1
+
     # return True if count is zero
     # and False otherwise
     return bracket_count == 0
