@@ -68,23 +68,31 @@ def parse_num(inp):
     ret = []
     # iterate through inp_str starting at 0 and step through
     # jumping every one index to always find the start of the next
-    # two digits
+    # chunk
     for index in range(0, len(inp_str), 2):
-        # if current digit start 
-        if inp_str[index] == '0':
-            ret.append(int_mapping[inp_str[index+1]])
-        elif inp_str[index] == '1':
-            ret.append(ten_mapping[int(inp_str[index+1])])
+        # set first_digit and second_digit to the first and second
+        # digits in the current chunk
+        first_digit = inp_str[index]
+        second_digit = inp_str[index + 1]
+        # if current chunk starts with a zero
+        if first_digit == '0':
+            # append the text value of the second digit
+            ret.append(int_mapping[second_digit])
+        # otherwise, if first_digit starts with a one
+        elif first_digit == '1':
+            # append the text value of the whole chunk
+            ret.append(int_mapping[first_digit + second_digit])
+        # finally, if first_digit is greater than one
         else:
-            first = mapping_mult[inp_str[index]]
-            second = int_mapping[inp_str[index+1]]
-
-            if second == 'zero':
-                res = first
+            # check if second_digit is a zero
+            if second_digit == '0':
+                # append the text value of the ten value alone
+                ret.append(tens_mapping[first_digit])
+            # otherwise,
             else:
-                res = first + '-' + second
-
-            ret.append(res)
+                # concatenate the ten value of the first with the int
+                # mapping of the second and append to ret
+                ret.append(tens_mapping[first_digit + '-' + second_digit])
     # return ret
     return ret
 
