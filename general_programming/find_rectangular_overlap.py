@@ -26,4 +26,11 @@ def find_overlap(point1, length1, point2, length2):
 
 
 def find_rectangular_overlap(rect1, rect2):
+    # initialize left_x and width by destructuring the return value of
+    # find_overlap passing in left_x and width of rect1 and rect2
+    # initialize bottom_y and height by destructuring the return value of
+    # find_overlap passing in bottom_y and height of rect1 and rect2
+    # if left_x and bottom_y are None
+        # return an object with None for all required properties
+    # return an object with with the return values of find_overlap
     pass
