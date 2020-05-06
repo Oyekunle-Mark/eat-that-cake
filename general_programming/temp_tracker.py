@@ -1,8 +1,8 @@
 class TempTracker(object):
     def __init__(self):
-        # initialize max_temp and min_temp to negative and positive infinities
-        self.max_temp = float('-inf')
-        self.min_temp = float('inf')
+        # initialize max_temp and min_temp to None
+        self.max_temp = None
+        self.min_temp = None
         # initialize mean, sum_so_far and count to zero
         self.mean, self.sum_so_far, self.count = 0, 0, 0
         # initialize mode to zero
@@ -12,6 +12,11 @@ class TempTracker(object):
         self.temp_frequency = [0] * 111
 
     def insert(self, temperature):
+        # if self.max_temp and self.min_temp is None
+        if self.max_temp is None and self.min_temp is None:
+            # set both to temperature
+            self.max_temp, self.min_temp = temperature
+
         # increment count by one
         self.count += 1
         # add temperature to  sum_so_far
