@@ -13,7 +13,7 @@ my_rectangle = {
 """
 
 
-def find_overlap(x, width, y, height):
+def find_overlap(point1, length1, point2, length2):
     pass
 
 
