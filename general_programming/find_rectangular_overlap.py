@@ -19,13 +19,16 @@ def find_overlap(point1, length1, point2, length2):
     # get the lowest_end_point as the min of point1 plus length1
     # and point2 plus length2
     lowest_end_point = min(point1 + length1, point2 + length2)
+
     # if highest_start_point greater than or equal to lowest_end_point
     if highest_start_point >= lowest_end_point:
         # return a tuple of two Nones
         return (None, None)
+
     # set overlap_length to the difference between
     # lowest_end_point and highest_start_point
     overlap_length = lowest_end_point - highest_start_point
+
     # return a tuple of highest_start_point and overlap_length
     return (highest_start_point,  overlap_length)
 
@@ -39,6 +42,7 @@ def find_rectangular_overlap(rect1, rect2):
     # find_overlap passing in bottom_y and height of rect1 and rect2
     bottom_y, height = find_overlap(
         rect1['bottom_y'], rect1['height'], rect2['bottom_y'], rect2['height'])
+
     # if left_x and bottom_y are None
     if left_x is None or bottom_y is None:
         # return an object with None for all required properties
@@ -48,6 +52,7 @@ def find_rectangular_overlap(rect1, rect2):
             'width': None,
             'height': None,
         }
+
     # return an object with with the return values of find_overlap
     return {
         'left_x': left_x,
