@@ -4,12 +4,15 @@ class TempTracker(object):
         self.max_temp = float('-inf')
         self.min_temp = float('inf')
         # initialize mean, sum_so_far and count to zero
-        pass
+        self.mean, self.sum_so_far, self.count = 0, 0, 0
 
     def insert(self, temperature):
         # increment count by one
+        self.count += 1
         # add temperature to  sum_so_far
+        self.sum_so_far += temperature
         # set mean to the division of sum_so_far and count
+        self.mean = self.sum_so_far / self.count
 
         # if temperature is greater than max_temp
         if temperature > self.max_temp:
@@ -30,7 +33,7 @@ class TempTracker(object):
 
     def get_mean(self):
         # return mean
-        pass
+        return self.mean
 
     def get_mode(self):
         pass
