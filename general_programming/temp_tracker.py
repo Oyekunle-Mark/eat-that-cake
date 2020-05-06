@@ -1,10 +1,15 @@
 class TempTracker(object):
     def __init__(self):
+        # for min max
         # initialize max_temp and min_temp to None
         self.min_temp = float('inf')
         self.max_temp = float('-inf')
+
+        # for mean
         # initialize mean, sum_so_far and count to zero
         self.mean, self.sum_so_far, self.count = 0, 0, 0
+
+        # for mode
         # initialize mode to zero
         self.mode = 0
         # since the temperature range is 0..110
@@ -12,6 +17,7 @@ class TempTracker(object):
         self.temp_frequency = [0] * 111
 
     def insert(self, temperature):
+        # for mean
         # increment count by one
         self.count += 1
         # add temperature to  sum_so_far
@@ -19,6 +25,7 @@ class TempTracker(object):
         # set mean to the division of sum_so_far and count
         self.mean = self.sum_so_far / self.count
 
+        # for mode
         # increment number at index temperature of temp_frequency
         self.temp_frequency[temperature] += 1
         # if index temperature of temp_frequency is greater than
@@ -27,6 +34,7 @@ class TempTracker(object):
             # set mode to temperature
             self.mode = temperature
 
+        # for min max
         # if temperature is greater than max_temp
         if temperature > self.max_temp:
             # set max_temp to temperature
