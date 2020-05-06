@@ -15,7 +15,7 @@ class TempTracker(object):
         # if self.max_temp and self.min_temp is None
         if self.max_temp is None and self.min_temp is None:
             # set both to temperature
-            self.max_temp, self.min_temp = temperature
+            self.max_temp, self.min_temp = temperature, temperature
 
         # increment count by one
         self.count += 1
@@ -26,8 +26,9 @@ class TempTracker(object):
 
         # increment number at index temperature of temp_frequency
         self.temp_frequency[temperature] += 1
-        # if index temperature of temp_frequency is greater than mode
-        if self.temp_frequency[temperature] > self.mode:
+        # if index temperature of temp_frequency is greater than
+        # index mode of temp_frequency
+        if self.temp_frequency[temperature] > self.temp_frequency[self.mode]:
             # set mode to temperature
             self.mode = temperature
 
