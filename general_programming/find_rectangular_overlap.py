@@ -15,14 +15,19 @@ my_rectangle = {
 
 def find_overlap(point1, length1, point2, length2):
     # get the highest_start_point as the max of point1 and point2
+    highest_start_point = max(point1, point2)
     # get the lowest_end_point as the min of point1 plus length1
     # and point2 plus length2
+    lowest_end_point = min(point1 + length1, point2 + length2)
     # if highest_start_point greater than or equal to lowest_end_point
+    if highest_start_point >= lowest_end_point:
         # return a tuple of two Nones
+        return (None, None)
     # set overlap_length to the difference between
     # highest_start_point and lowest_end_point
+    overlap_length = highest_start_point - lowest_end_point
     # return a tuple of highest_start_point and overlap_length
-    pass
+    return (highest_start_point,  overlap_length)
 
 
 def find_rectangular_overlap(rect1, rect2):
