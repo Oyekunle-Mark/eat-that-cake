@@ -12,5 +12,6 @@ def find_repeat(numbers_list):
     triangular_sum = (n * n + n) / 2
     # find the total_sum of all numbers in numbers_list
     total_sum = sum(numbers_list)
+
     # return the difference of total_sum and triangular_sum
     return total_sum - triangular_sum
